@@ -1,0 +1,5 @@
+.pagination .active a {
+  background-color: #404040 !important;
+  border-color: #404040 !important;
+  color: white !important;
+}
