@@ -56,9 +56,9 @@
                                 $offset = ($page - 1) * $total_perhalaman;
 
                                 
-                                $query = "SELECT * FROM user WHERE first_name LIKE '%$search%' OR last_name LIKE '%$search%' OR username LIKE '%$search%' LIMIT $offset, $total_perhalaman";
+                                $query = "SELECT * FROM user WHERE first_name LIKE '%$search%' OR last_name LIKE '%$search%' OR username LIKE '%$search%' OR gender LIKE '%$search%' LIMIT $offset, $total_perhalaman";
                                 $query_run = mysqli_query($conn, $query);
-                                $total_query = "SELECT COUNT(*) as total FROM user WHERE first_name LIKE '%$search%' OR last_name LIKE '%$search%' OR username LIKE '%$search%'";
+                                $total_query = "SELECT COUNT(*) as total FROM user WHERE first_name LIKE '%$search%' OR last_name LIKE '%$search%' OR username LIKE '%$search%' OR gender LIKE '%$search%'";
                                 $total_result = mysqli_query($conn, $total_query);
                                 $total_row = mysqli_fetch_assoc($total_result);
                                 $total_records = $total_row['total'];
